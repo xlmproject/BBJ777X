@@ -1,0 +1,11 @@
+const clocks=[...document.querySelectorAll('.clock')];
+function updateClocks(){const now=new Date();for(const el of clocks){const time=el.querySelector('time');try{time.textContent=new Intl.DateTimeFormat('en-US',{timeZone:el.dataset.zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(now)}catch{time.textContent='--:--:--'}}}
+updateClocks();setInterval(updateClocks,1000);
+const toggle=document.getElementById('aboutToggle'),info=document.getElementById('tokenInfo');
+function setInfo(open){toggle.setAttribute('aria-expanded',String(open));info.setAttribute('aria-hidden',String(!open));}
+toggle.addEventListener('click',()=>setInfo(toggle.getAttribute('aria-expanded')!=='true'));
+// Canvas starfield with cursor-reactive, colorful particle dispersion.
+const canvas=document.getElementById('universe'),ctx=canvas.getContext('2d');let w,h,dpr,stars=[],mouse={x:-9999,y:-9999,active:false};
+function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(430,Math.floor(w*h/2500))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.35+.25,a:Math.random()*.7+.2,p:Math.random()*6.28,s:Math.random()*.012+.003,hue:Math.random()*60+195,vx:0,vy:0}))}
+function pointer(e){const p=e.touches?e.touches[0]:e;mouse.x=p.clientX;mouse.y=p.clientY;mouse.active=true}addEventListener('resize',resize);addEventListener('pointermove',pointer,{passive:true});addEventListener('pointerleave',()=>mouse.active=false);addEventListener('touchend',()=>mouse.active=false,{passive:true});resize();
+function frame(t){ctx.clearRect(0,0,w,h);for(const s of stars){s.p+=s.s;let dx=s.x-mouse.x,dy=s.y-mouse.y,dist=Math.hypot(dx,dy);if(mouse.active&&dist<180){const force=(1-dist/180)*.9;s.vx+=dx/(dist||1)*force*.12;s.vy+=dy/(dist||1)*force*.12;}s.vx*=.94;s.vy*=.94;s.x+=s.vx;s.y+=s.vy;if(s.x<0)s.x=w;if(s.x>w)s.x=0;if(s.y<0)s.y=h;if(s.y>h)s.y=0;const glow=(Math.sin(s.p)+1)*.22;ctx.beginPath();ctx.arc(s.x,s.y,s.r+glow,0,Math.PI*2);ctx.fillStyle=`hsla(${s.hue+(mouse.active&&dist<180?Math.random()*150:0)},95%,${72+glow*30}%,${s.a})`;ctx.shadowBlur=mouse.active&&dist<180?14:5;ctx.shadowColor=`hsla(${s.hue},100%,65%,.8)`;ctx.fill();ctx.shadowBlur=0;}requestAnimationFrame(frame)}requestAnimationFrame(frame);
