@@ -8,7 +8,7 @@
 <body>
 <canvas id="universe" aria-hidden="true"></canvas><div class="nebula nebula-a"></div><div class="nebula nebula-b"></div><div class="nebula nebula-c"></div>
 <header class="topbar">
-  <div class="clocks" aria-label="World clocks">
+  <div class="clocks" aria-label="Live world clocks">
     <div class="clock" data-zone="America/New_York"><span class="flag">🇺🇸</span><span class="place">USA · New York</span><time>--:--:--</time></div>
     <div class="clock" data-zone="Asia/Tokyo"><span class="flag">🇯🇵</span><span class="place">Japan · Tokyo</span><time>--:--:--</time></div>
     <div class="clock" data-zone="America/Toronto"><span class="flag">🇨🇦</span><span class="place">Canada · Toronto</span><time>--:--:--</time></div>
@@ -16,19 +16,15 @@
     <div class="clock" data-zone="Europe/London"><span class="flag">🇬🇧</span><span class="place">UK · London</span><time>--:--:--</time></div>
     <div class="clock" data-zone="Europe/Paris"><span class="flag">🇫🇷</span><span class="place">France · Paris</span><time>--:--:--</time></div>
   </div>
-  <div class="brand"><img src="/assets/bbj777x-logo.png" alt="BBJ777x airplane logo"><div><div class="brand-name">BBJ777x TOKEN</div><div class="issuer" title="Stellar issuer account">GAKWHKJX4XHFWXPUD55ONHK2NU5YVX32Z4IM35H2A6MBBBD3FLPZBXLM</div></div></div>
-  <button class="about-toggle" id="aboutToggle" aria-expanded="false" aria-controls="tokenInfo"><span>ⓘ</span> About token <span class="chevron">⌄</span></button>
+  <div class="brand"><img src="/assets/bbj777x-logo.png" alt="White airplane on navy BBJ777x logo"><div><div class="brand-name">BBJ777x TOKEN</div><div class="issuer" title="Stellar issuer account">GAKWHKJX4XHFWXPUD55ONHK2NU5YVX32Z4IM35H2A6MBBBD3FLPZBXLM</div></div></div>
+  <button class="about-toggle" id="aboutToggle" aria-expanded="false" aria-controls="tokenInfo">ⓘ &nbsp;About token <span class="chevron">⌄</span></button>
 </header>
 <main aria-label="BBJ777x token universe">
-  <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core-glow"></div>
-  <div class="aircraft-flight" aria-hidden="true"><img src="/assets/aircraft.png" alt=""></div>
+  <section class="hero" aria-label="Animated galaxy"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core-glow"></div><div class="aircraft-flight" aria-hidden="true"><img src="/assets/aircraft.png" alt=""></div></section>
   <a class="trade-button" href="https://stellarterm.org/" target="_blank" rel="noopener noreferrer"><span>TRADE BBJ777x</span><b>↗</b></a>
-  <section class="token-info" id="tokenInfo" aria-hidden="true">
-    <div class="info-mark"><img src="/assets/bbj777x-logo.png" alt=""></div>
-    <div class="info-copy"><h2>BBJ777x TOKEN</h2><p>BBJ777x is a digital asset issued on the Stellar network. Its identity is anchored by the issuer account shown above. Always verify the asset code and issuer before establishing a trustline or trading.</p>
-    <h3>Stellar blockchain</h3><p>Stellar is an open network designed to move value quickly and efficiently. It supports issued assets, low-cost transactions and a global ecosystem of wallets and decentralized exchanges.</p></div>
-  </section>
+  <section class="token-info" id="tokenInfo" aria-hidden="true"><div class="info-mark"><img src="/assets/bbj777x-logo.png" alt=""></div><div class="info-copy"><h2>BBJ777x TOKEN</h2><p>BBJ777x is a digital asset issued on the Stellar network. Its identity is anchored by the issuer account shown above. Always verify the asset code and issuer before establishing a trustline or trading.</p><h3>Stellar blockchain</h3><p>Stellar is an open network designed to move value quickly and efficiently. It supports issued assets, low-cost transactions and a global ecosystem of wallets and decentralized exchanges.</p></div></section>
 </main>
+<section class="market-section" aria-labelledby="marketTitle"><div class="market-heading"><div><span class="eyebrow">STELLAR DECENTRALIZED EXCHANGE</span><h2 id="marketTitle">BBJ777x / XLM · Order-book depth</h2><p>Live offers from the Stellar public network, when available.</p></div><span class="live-state" id="marketState">CONNECTING…</span></div><div class="chart-wrap"><canvas id="marketChart" role="img" aria-label="Live Stellar order book bid and ask depth chart"></canvas><div class="chart-empty" id="chartEmpty">Waiting for available BBJ777x / XLM liquidity…</div></div><div class="chart-foot"><span>Source: Stellar Horizon public API</span><span id="chartUpdated">Updates automatically</span></div></section>
 <footer><span>BBJ777x · STELLAR NETWORK</span><span>SPACE FORWARD. VALUE CONNECTED.</span></footer>
 <script src="/script.js"></script>
 </body></html>
