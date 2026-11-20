@@ -1,22 +1,22 @@
-# BBJ777x TOKEN — Stellar asset metadata
-# Publish at: https://bbj777xlm.pages.dev/.well-known/stellar.toml
-VERSION="2.0.0"
-NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+# Stellar asset metadata for BBJ777x TOKEN
+# Publish this file at https://bbj777xlm.pages.dev/.well-known/stellar.toml
 
-ACCOUNTS=[
-  "GAKWHKJX4XHFWXPUD55ONHK2NU5YVX32Z4IM35H2A6MBBBD3FLPZBXLM"
-]
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
 ORG_NAME="BBJ777x TOKEN"
 ORG_URL="https://bbj777xlm.pages.dev/"
+ORG_DESCRIPTION="BBJ777x TOKEN is a digital asset issued on the Stellar network. Verify the asset code and issuer account before interacting with the asset."
 ORG_LOGO="https://bbj777xlm.pages.dev/assets/bbj777x-logo.png"
-ORG_DESCRIPTION="BBJ777x is a digital asset issued on the Stellar network. Verify the asset code and issuer account before interacting with the asset."
+ORG_TWITTER=""
+ORG_OFFICIAL_EMAIL=""
 
 [[CURRENCIES]]
 code="BBJ777x"
 issuer="GAKWHKJX4XHFWXPUD55ONHK2NU5YVX32Z4IM35H2A6MBBBD3FLPZBXLM"
-name="BBJ777x TOKEN"
-desc="A digital asset issued on the Stellar network."
-image="https://bbj777xlm.pages.dev/assets/bbj777x-logo.png"
 display_decimals=7
+name="BBJ777x TOKEN"
+desc="A digital asset issued on the Stellar blockchain."
+conditions="Use the Stellar issuer address to verify this asset. No price, redemption, or utility is implied by this metadata."
+image="https://bbj777xlm.pages.dev/assets/bbj777x-logo.png"
+home_domain="bbj777xlm.pages.dev"
