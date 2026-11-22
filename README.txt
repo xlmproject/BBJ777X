@@ -4,7 +4,8 @@ CONTENTS
 - index.html: responsive landing page
 - styles.css / script.js: animation, live clocks, interaction and live order-book chart
 - assets/bbj777x-logo.png: token logo
-- assets/aircraft.png: aircraft visual used in the flight animation
+- assets/Futuristic Airliner in Neon Halo.png
+: aircraft visual used in the flight animation
 - .well-known/stellar.toml: Stellar asset metadata
 - stellar.toml: copy of the metadata file for convenience
 
