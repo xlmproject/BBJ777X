@@ -1,6 +1,3 @@
-# Stellar asset metadata for BBJ777x TOKEN
-# Publish this file at https://bbj777xlm.pages.dev/.well-known/stellar.toml
-
 NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
@@ -8,8 +5,6 @@ ORG_NAME="BBJ777x TOKEN"
 ORG_URL="https://bbj777xlm.pages.dev/"
 ORG_DESCRIPTION="BBJ777x TOKEN is a digital asset issued on the Stellar network. Verify the asset code and issuer account before interacting with the asset."
 ORG_LOGO="https://bbj777xlm.pages.dev/assets/bbj777x-logo.png"
-ORG_TWITTER=""
-ORG_OFFICIAL_EMAIL=""
 
 [[CURRENCIES]]
 code="BBJ777x"
